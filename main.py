@@ -13,7 +13,7 @@ api = FastAPI()
 
 origins = [
     "http://localhost.tiangolo.com", "https://localhost.tiangolo.com",
-    "http://localhost", "http://localhost:8080", "https://reservahotelesminticjg.herokuapp.com/"
+    "http://localhost", "http://localhost:8080", "https://reserva-hoteles-g1m3-18.herokuapp.com"
 ]
 
 api.add_middleware(
