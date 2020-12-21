@@ -3,6 +3,10 @@ from db.hotel_db import Rooms, get_rooms, print_rooms
 from models.user_models import UserIn, UserOut
 from models.Room_model import RoomIn
 
+from db.adicionales_db import Alimentacion, get_alimentacion, print_alimentacion
+from models.adicionales_model import AlimentacionIn
+
+
 import datetime
 import uvicorn
 from fastapi import FastAPI
@@ -61,3 +65,13 @@ async def searchRoomsAvailable(RoomIn: RoomIn):
     else:
         listado = print_rooms(habitacionesDisponibles)
     return listado
+
+@api.get("/food/")
+async def getBreakfastPrice():
+    #alimentacion_in_db = get_alimentacion(tipo)
+
+    #if alimentacion_in_db == None:
+    #   raise HTTPException(status_code=404, detail="No existe esa comida")
+
+    #return alimentacion_in_db
+    return print_alimentacion()
